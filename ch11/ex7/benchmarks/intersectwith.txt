@@ -1,0 +1,15 @@
+> go test -bench=BenchmarkIntersectWith -benchtime=1000x
+2023/03/24 14:55:49 Random seed: 1679666149862616000
+
+BenchmarkIntersectWith/type=intset.BitVector_size=5_min=0_max=10-8         	                1000	        23.29 ns/op
+BenchmarkIntersectWith/type=intset.MapSet_size=5_min=0_max=10-8            	                1000	       117.1 ns/op
+BenchmarkIntersectWith/type=intset.BitVector_size=50_min=10_max=100-8      	                1000	        51.79 ns/op
+BenchmarkIntersectWith/type=intset.MapSet_size=50_min=10_max=100-8         	                1000	      2557 ns/op
+BenchmarkIntersectWith/type=intset.BitVector_size=500_min=100_max=1000-8   	                1000	       146.0 ns/op
+BenchmarkIntersectWith/type=intset.MapSet_size=500_min=100_max=1000-8      	                1000	     32987 ns/op
+BenchmarkIntersectWith/type=intset.BitVector_size=5000_min=1000_max=10000-8         	    1000	      1041 ns/op
+BenchmarkIntersectWith/type=intset.MapSet_size=5000_min=1000_max=10000-8            	    1000	    304285 ns/op
+BenchmarkIntersectWith/type=intset.BitVector_size=50000_min=10000_max=100000-8      	    1000	      6547 ns/op
+BenchmarkIntersectWith/type=intset.MapSet_size=50000_min=10000_max=100000-8         	    1000	   3191572 ns/op
+BenchmarkIntersectWith/type=intset.BitVector_size=500000_min=100000_max=1000000-8   	    1000	     58844 ns/op
+BenchmarkIntersectWith/type=intset.MapSet_size=500000_min=100000_max=1000000-8      	    1000	  43805320 ns/op

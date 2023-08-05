@@ -1,0 +1,10 @@
+Default values are printed with the °C because, although it looks like their type is a float,
+it is not; they actually are treated as Celsius instances. Since the Celsius struct has a
+String() method defined, and the Celsius struct is embedded into the celsiusFlag struct,
+celsiusFlag satisfies the fmt.Stringer interface.
+
+So, at some point, the default value is printed to stdout/stderr with one of fmt's
+Print methods and using Golang verbs like %s or %v. When %s or %v placeholders are
+replaced with the actual value (i.e., Celsius instance's value), they will not print it
+as is; instead, they will rely on the String() method to do so. Hence why default values
+like 20.0 are printed with the °C suffix.

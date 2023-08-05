@@ -1,0 +1,28 @@
+<html>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+    <body>
+        <h3>Store</h3>
+        {{ if not . }}
+        <i>The store has no items</i>
+        {{ else }}
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            {{ range $item, $price := . }}
+            <tr>
+                <td>{{ $item }}</td>
+                <td>{{ $price }}</td>
+            </tr>
+            {{ end }}
+        </table>
+        {{ end }}
+    </body>
+</html>

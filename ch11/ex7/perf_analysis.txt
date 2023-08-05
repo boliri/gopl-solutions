@@ -1,0 +1,8 @@
+The performance of bit vector sets clearly oustands their map-based counterpart.
+Every single set operation is way faster if using bit vectors, even if the chosen word size is really large.
+
+Obviously, the performance of bit vectors gets worse as the word size grows, but if we compare it to map sets under the
+same circumstances it's WAY better.
+
+You can have a look at the benchmarks folder to see actual data and compare both implementations. Each benchmark defines a set size
+and a closed interval that specifies the min and max value of each element in the set.

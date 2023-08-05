@@ -1,0 +1,15 @@
+> go test -bench=BenchmarkSymmetricDifference -benchtime=1000x
+2023/03/24 14:59:34 Random seed: 1679666374975264000
+
+BenchmarkSymmetricDifference/type=intset.BitVector_size=5_min=0_max=10-8         	            1000	        30.38 ns/op
+BenchmarkSymmetricDifference/type=intset.MapSet_size=5_min=0_max=10-8            	            1000	       221.8 ns/op
+BenchmarkSymmetricDifference/type=intset.BitVector_size=50_min=10_max=100-8      	            1000	        54.62 ns/op
+BenchmarkSymmetricDifference/type=intset.MapSet_size=50_min=10_max=100-8         	            1000	      5481 ns/op
+BenchmarkSymmetricDifference/type=intset.BitVector_size=500_min=100_max=1000-8   	            1000	       157.5 ns/op
+BenchmarkSymmetricDifference/type=intset.MapSet_size=500_min=100_max=1000-8      	            1000	     68342 ns/op
+BenchmarkSymmetricDifference/type=intset.BitVector_size=5000_min=1000_max=10000-8         	    1000	      1181 ns/op
+BenchmarkSymmetricDifference/type=intset.MapSet_size=5000_min=1000_max=10000-8            	    1000	    648162 ns/op
+BenchmarkSymmetricDifference/type=intset.BitVector_size=50000_min=10000_max=100000-8      	    1000	      6801 ns/op
+BenchmarkSymmetricDifference/type=intset.MapSet_size=50000_min=10000_max=100000-8         	    1000	   6673564 ns/op
+BenchmarkSymmetricDifference/type=intset.BitVector_size=500000_min=100000_max=1000000-8   	    1000	     57853 ns/op
+BenchmarkSymmetricDifference/type=intset.MapSet_size=500000_min=100000_max=1000000-8      	    1000	 107092194 ns/op

@@ -1,0 +1,15 @@
+> go test -bench=BenchmarkUnionWith -benchtime=1000x
+2023/03/24 14:52:27 Random seed: 1679665947169289000
+
+BenchmarkUnionWith/type=intset.BitVector_size=5_min=0_max=10-8         	                1000	         2.500 ns/op
+BenchmarkUnionWith/type=intset.MapSet_size=5_min=0_max=10-8            	                1000	       134.0 ns/op
+BenchmarkUnionWith/type=intset.BitVector_size=50_min=10_max=100-8      	                1000	         3.500 ns/op
+BenchmarkUnionWith/type=intset.MapSet_size=50_min=10_max=100-8         	                1000	       976.4 ns/op
+BenchmarkUnionWith/type=intset.BitVector_size=500_min=100_max=1000-8   	                1000	        10.25 ns/op
+BenchmarkUnionWith/type=intset.MapSet_size=500_min=100_max=1000-8      	                1000	     14972 ns/op
+BenchmarkUnionWith/type=intset.BitVector_size=5000_min=1000_max=10000-8         	    1000	        95.79 ns/op
+BenchmarkUnionWith/type=intset.MapSet_size=5000_min=1000_max=10000-8            	    1000	    180958 ns/op
+BenchmarkUnionWith/type=intset.BitVector_size=50000_min=10000_max=100000-8      	    1000	       859.8 ns/op
+BenchmarkUnionWith/type=intset.MapSet_size=50000_min=10000_max=100000-8         	    1000	   2023417 ns/op
+BenchmarkUnionWith/type=intset.BitVector_size=500000_min=100000_max=1000000-8   	    1000	     10470 ns/op
+BenchmarkUnionWith/type=intset.MapSet_size=500000_min=100000_max=1000000-8      	    1000	  26751903 ns/op

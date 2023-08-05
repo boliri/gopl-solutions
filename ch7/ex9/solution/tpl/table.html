@@ -1,0 +1,30 @@
+<html>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+    <body>
+        <h3>Tracks</h3>
+        <table>
+            <tr>
+                <th><a href="/sort?column=title">Title</a></th>
+                <th><a href="/sort?column=artist">Artist</a></th>
+                <th><a href="/sort?column=album">Album</a></th>
+                <th><a href="/sort?column=year">Year</a></th>
+                <th><a href="/sort?column=length">Length</a></th>
+            </tr>
+            {{ range $track := . }}
+            <tr>
+                <td>{{ $track.Title }}</td>
+                <td>{{ $track.Artist }}</td>
+                <td>{{ $track.Album }}</td>
+                <td>{{ $track.Year }}</td>
+                <td>{{ $track.Length }}</td>
+            </tr>
+            {{ end }}
+        </table>
+    </body>
+</html>

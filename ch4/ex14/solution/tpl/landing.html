@@ -1,0 +1,45 @@
+{{ define "issueTable" }}
+<table>
+    <tr>
+        <th>Issue</th>
+        <th>Title</th>
+        <th>State</th>
+        <th>Creator</th>
+        <th>Assignee</th>
+        <th>Labels</th>
+    </tr>
+    {{ range $issue := . }}
+    <tr>
+        <td><a href="{{ $issue.HTMLURL }}">{{ $issue.Number }}</a></td>
+        <td>{{ $issue.Title }}</td>
+        <td>{{ $issue.State }}</td>
+        <td><a href="{{ $issue.Creator.HTMLURL }}">{{ $issue.Creator.Login }}</a></td>
+        <td>
+            {{ if $issue.Assignee }}
+                <a href="{{ $issue.Assignee.HTMLURL }}">{{ $issue.Assignee.Login }}</a>
+            {{ else }}
+                <i>unassigned</i>
+            {{ end }}
+        </td>
+        <td>{{ $issue.GetLabelsStr }}</td>
+    </tr>
+    {{ end }}
+</table>
+{{ end }}
+
+<html>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+    <body>
+        <h3>Milestones</h3>
+        {{ template "issueTable" .Milestones }}
+
+        <h3>Bugs</h3>
+        {{ template "issueTable" .Bugs }}
+    </body>
+</html>

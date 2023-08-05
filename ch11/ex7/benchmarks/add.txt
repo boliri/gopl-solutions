@@ -1,0 +1,15 @@
+> go test -bench=BenchmarkAdd -benchtime=1000x
+2023/03/24 14:42:49 Random seed: 1679665369628404000
+
+BenchmarkAdd/type=intset.BitVector_size=5_min=0_max=10-8         	                    1000	         0.1670 ns/op
+BenchmarkAdd/type=intset.MapSet_size=5_min=0_max=10-8            	                    1000	         0.5000 ns/op
+BenchmarkAdd/type=intset.BitVector_size=50_min=10_max=100-8      	                    1000	         0.2920 ns/op
+BenchmarkAdd/type=intset.MapSet_size=50_min=10_max=100-8         	                    1000	         1.541 ns/op
+BenchmarkAdd/type=intset.BitVector_size=500_min=100_max=1000-8   	                    1000	         1.042 ns/op
+BenchmarkAdd/type=intset.MapSet_size=500_min=100_max=1000-8      	                    1000	        13.62 ns/op
+BenchmarkAdd/type=intset.BitVector_size=5000_min=1000_max=10000-8         	            1000	         7.875 ns/op
+BenchmarkAdd/type=intset.MapSet_size=5000_min=1000_max=10000-8            	            1000	       120.2 ns/op
+BenchmarkAdd/type=intset.BitVector_size=50000_min=10000_max=100000-8      	            1000	        76.79 ns/op
+BenchmarkAdd/type=intset.MapSet_size=50000_min=10000_max=100000-8         	            1000	      1384 ns/op
+BenchmarkAdd/type=intset.BitVector_size=500000_min=100000_max=1000000-8   	            1000	       736.3 ns/op
+BenchmarkAdd/type=intset.MapSet_size=500000_min=100000_max=1000000-8      	            1000	     17449 ns/op
